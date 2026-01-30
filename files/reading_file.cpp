@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <iomanip>
 
 int main(){
     /*
@@ -35,4 +36,12 @@ int main(){
     std::cout << line_buffer << std::endl;
     std::cout << number << std::endl;
     std::cout << total << std::endl;
+    text.close();
+    std::ifstream text2{"text2.txt"};
+    while(text2 >> line >> number >> total){
+        std::cout << std::setw(10) << std::left 
+                << std::setw(10) << line
+                << std::setw(10) << number
+                << std::setw(10) << total << std::endl;
+    }
 }
