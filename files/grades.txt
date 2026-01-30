@@ -1,0 +1,11 @@
+ABCDE
+Frank
+ABCDE
+George
+ABCAC
+Henry
+BBCDE
+Ian
+BBAAE
+Jack
+BBCDE
