@@ -23,4 +23,16 @@ int main(){
         std::cout << line << std::endl;
     }
     in_file.close();
+    std::cout << "-------" << std::endl;
+    std::ifstream text {"text.txt"};
+    std::string line_buffer;
+    int number;
+    double total;
+    if(!text){
+        std::cerr << "Error while opening the file" << std::endl;
+    }
+    text >> line_buffer >> number >> total;
+    std::cout << line_buffer << std::endl;
+    std::cout << number << std::endl;
+    std::cout << total << std::endl;
 }
