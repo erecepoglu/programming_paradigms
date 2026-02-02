@@ -14,8 +14,6 @@ int main(){
     
     int sum = std::accumulate(vec.begin(),vec.end(),0);
     std::cout << "The sum: " << sum << std::endl;
-    int subtracting = std::accumulate(vec.begin(), vec.end(),1, 
-    [](int a, int b)
-        {return a - b;});
+    int subtracting = std::accumulate(vec.rbegin() + 1, vec.rend(), vec.at(vec.size()-1), std::minus<int>());
     std::cout << "Subtraction: " << subtracting << std::endl;
 }
