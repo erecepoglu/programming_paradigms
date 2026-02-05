@@ -31,5 +31,6 @@ int main(){
                     " " << item3.get_value().get_value() << std::endl;
 
 
-
+    My_Pair<std::string, int> pair {"Ahmet", 24};
+    std::cout << pair.first << " " << pair.second << std::endl;
 }
