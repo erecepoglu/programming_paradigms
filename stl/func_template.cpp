@@ -24,7 +24,10 @@ struct Person{
         return this->age > rhs.age;
     }
 };
-
+std::ostream &operator<<(std::ostream &os, const Person& p){
+    os << p.name;
+    return os;
+}
 int main(){
     std::cout << "The max between 10 and 20 is: " << max<int>(10,20) << std::endl;
     int a = 10;
@@ -35,4 +38,5 @@ int main(){
     Person p2 {"Ahmed", 20};
     Person p3 = max(p1,p2);
     std::cout << p3.name << " is older" << std::endl;
+    func(p1,p2);
 }
