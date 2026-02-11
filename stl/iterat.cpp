@@ -12,7 +12,7 @@ int main(){
         */
 
     std::vector<int> vec{1,2,3};
-    std::vector<int>::iterator t1;// it will iterate only over vector
+    std::vector<int>::iterator t1 = vec.begin();// it will iterate only over vector
     std::list<std::string>::iterator it2; // it will iterate only over list
     std::map<std::string, std::string>::iterator it3;  // it will iterate only over map
     std::set<char>::iterator it4;
@@ -32,5 +32,8 @@ int main(){
         std::cout << "{ "<<it6->first << " : " << it6->second <<" }"<< std::endl;;
         it6++;
     }
-
+    while(t1 != vec.end()){
+        std::cout << &t1 << std::endl;
+        t1++;
+    }
 }
